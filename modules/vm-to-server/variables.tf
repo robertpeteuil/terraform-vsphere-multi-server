@@ -5,32 +5,32 @@ variable "vsphere_server" {
   default     = "one"
 }
 
-# CLUSTER 1 - server user - or use env var VSPHERE_USER
+# CLUSTER 1 - server user 1
 variable "vsphere_user_1" {
   description = "vSphere Username"
 }
 
-# CLUSTER 1 - user pass - or use env var VSPHERE_PASSWORD
+# CLUSTER 1 - user pass 1
 variable "vsphere_password_1" {
   description = "vSphere Password"
 }
 
-# CLUSTER 1 - server address - or use env var VSPHERE_SERVER
+# CLUSTER 1 - server address 1
 variable "vsphere_server_1" {
   description = "vSphere Server"
 }
 
-# CLUSTER 2 - server user - or use env var VSPHERE_USER
+# CLUSTER 2 - server user 2
 variable "vsphere_user_2" {
   description = "vSphere Username"
 }
 
-# CLUSTER 2 - user pass - or use env var VSPHERE_PASSWORD
+# CLUSTER 2 - user pass 2
 variable "vsphere_password_2" {
   description = "vSphere Password"
 }
 
-# CLUSTER 2 - server address - or use env var VSPHERE_SERVER
+# CLUSTER 2 - server address 2
 variable "vsphere_server_2" {
   description = "vSphere Server"
 }
