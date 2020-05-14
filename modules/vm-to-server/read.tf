@@ -15,7 +15,7 @@ data "vsphere_datastore" "vsphere_datastore_one" {
   provider = vsphere.one
 
   name          = var.datastore_name
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_one.id
 }
 
 data "vsphere_compute_cluster" "vsphere_compute_cluster_one" {
@@ -23,7 +23,7 @@ data "vsphere_compute_cluster" "vsphere_compute_cluster_one" {
   provider = vsphere.one
 
   name          = var.cluster_name
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_one.id
 }
 
 data "vsphere_network" "vm_network_one" {
@@ -31,7 +31,7 @@ data "vsphere_network" "vm_network_one" {
   provider = vsphere.one
 
   name          = var.vm_network
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_one.id
 }
 
 data "vsphere_virtual_machine" "template_from_ovf_one" {
@@ -39,7 +39,7 @@ data "vsphere_virtual_machine" "template_from_ovf_one" {
   provider = vsphere.one
 
   name          = var.vm_template_name
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_one.id
 }
 
 #-----------------------------------------------------------------
@@ -58,7 +58,7 @@ data "vsphere_datastore" "vsphere_datastore_two" {
   provider = vsphere.two
 
   name          = var.datastore_name
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_two.id
 }
 
 data "vsphere_compute_cluster" "vsphere_compute_cluster_two" {
@@ -66,7 +66,7 @@ data "vsphere_compute_cluster" "vsphere_compute_cluster_two" {
   provider = vsphere.two
 
   name          = var.cluster_name
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_two.id
 }
 
 data "vsphere_network" "vm_network_two" {
@@ -74,7 +74,7 @@ data "vsphere_network" "vm_network_two" {
   provider = vsphere.two
 
   name          = var.vm_network
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_two.id
 }
 
 data "vsphere_virtual_machine" "template_from_ovf_two" {
@@ -82,5 +82,5 @@ data "vsphere_virtual_machine" "template_from_ovf_two" {
   provider = vsphere.two
 
   name          = var.vm_template_name
-  datacenter_id = data.vsphere_datacenter.dc_name.id
+  datacenter_id = data.vsphere_datacenter.dc_name_two.id
 }
