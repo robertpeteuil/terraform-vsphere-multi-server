@@ -9,7 +9,7 @@ terraform {
   }
 }
 
-# Create VM on Consul One
+# Create VM on vSphere Server One
 module "first_vm" {
   source = "./modules/vm-to-server"
 
@@ -28,6 +28,7 @@ module "first_vm" {
   vm_ram_size      = 2048
 }
 
+# Create VM on vSphere Server Two
 module "second_vm" {
   source = "./modules/vm-to-server"
 
